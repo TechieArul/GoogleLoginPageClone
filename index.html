@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login_containner">
+        <div class="logo">
+            <img src="google_logo.png" alt="">
+        </div>
+        <div class="sign_in">Sign In</div>
+
+        <div class="form">
+            <input id="email" type="text" class="inp" required>
+            <label for="email" class="lab">Email or phone</label>
+        </div>
+
+        <div class="form">
+            <input id="password" type="password" class="inp" required>
+            <label for="password" class="lab">Enter your password</label>
+        </div>
+
+        <input id="cb" type="checkbox"><label for="cb">Show password</label>
+
+        <div class="bottom_content">
+            <a href="#">Forget password ?</a>
+            <button>Next</button>
+        </div>
+        
+    </div>
+
+    <script>
+
+        var pass = document.querySelector("#password")
+        var cb = document.querySelector("#cb")
+
+        cb.addEventListener("click", function(){
+            var a = pass.getAttribute("type")=="password"? "text":"password"
+
+            pass.setAttribute("type",a)
+        })
+
+    </script>
+    
+    
+</body>
+</html>
